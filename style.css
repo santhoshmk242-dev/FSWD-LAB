@@ -1,0 +1,605 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+button,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 84px;
+    background: #ffffff;
+    border: 1px solid #e3e6eb;
+    border-radius: 6px;
+    margin: 0 4px;
+    padding: 0 52px;
+
+    display: flex;
+    align-items: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    color: #1769e8;
+    font-size: 27px;
+    font-weight: 700;
+
+    min-width: 285px;
+}
+
+.brand i {
+    font-size: 29px;
+}
+
+.navigation {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.nav-link {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    position: relative;
+
+    color: #263247;
+    text-decoration: none;
+
+    font-size: 20px;
+}
+
+.nav-link i {
+    font-size: 22px;
+}
+
+.nav-link.active {
+    color: #095ddd;
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: -3px;
+    right: -3px;
+
+    height: 3px;
+    background: #1769e8;
+}
+
+.notification {
+    margin-left: auto;
+
+    border: none;
+    background: transparent;
+
+    color: #263247;
+
+    font-size: 27px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+    width: calc(100% - 245px);
+    max-width: 1390px;
+
+    margin: 25px auto 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 2.25fr) minmax(330px, 1fr);
+
+    gap: 35px;
+}
+
+.feed {
+    min-width: 0;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: #ffffff;
+
+    border: 1px solid #e1e5eb;
+
+    border-radius: 7px;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   CREATE POST
+========================= */
+
+.create-post {
+    padding: 20px 24px 19px;
+
+    margin-bottom: 22px;
+}
+
+.create-post h2 {
+    color: #090909;
+
+    font-size: 25px;
+
+    margin-bottom: 24px;
+}
+
+.create-post textarea {
+    width: 100%;
+    height: 117px;
+
+    resize: none;
+
+    border: 1px solid #bfc4cb;
+    border-radius: 6px;
+
+    padding: 20px;
+
+    font-size: 19px;
+
+    color: #263247;
+
+    outline: none;
+}
+
+.create-post textarea:focus {
+    border-color: #1769e8;
+}
+
+.create-post textarea::placeholder {
+    color: #3c4759;
+}
+
+.post-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 18px;
+}
+
+.tools {
+    display: flex;
+    gap: 28px;
+}
+
+.tools button {
+    border: none;
+    background: transparent;
+
+    color: #0864d9;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.post-button {
+    border: none;
+
+    background: #0864df;
+    color: white;
+
+    border-radius: 6px;
+
+    padding: 12px 33px;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.post-button:hover {
+    background: #0755bd;
+}
+
+
+/* =========================
+   POSTS
+========================= */
+
+.post {
+    padding: 20px 42px 20px;
+
+    margin-bottom: 15px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.post-header h3 {
+    font-size: 19px;
+    color: #111111;
+
+    margin-bottom: 6px;
+}
+
+.post-header span {
+    font-size: 16px;
+    color: #394456;
+}
+
+.more-button {
+    border: none;
+    background: transparent;
+
+    color: #253148;
+
+    font-size: 21px;
+
+    cursor: pointer;
+}
+
+.post-content {
+    margin-top: 16px;
+
+    font-size: 18px;
+
+    line-height: 1.65;
+
+    color: #171717;
+}
+
+.post-actions {
+    margin-top: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 105px;
+}
+
+.action {
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #28354a;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+.action i {
+    font-size: 23px;
+}
+
+.like-button i {
+    color: #d91d59;
+}
+
+.like-button.liked i {
+    animation: heartPop 0.25s ease;
+}
+
+@keyframes heartPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.35);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-card {
+    overflow: hidden;
+}
+
+.cover-image {
+    width: 100%;
+    height: 139px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.profile-content {
+    padding: 34px 23px 30px;
+}
+
+.profile-content h2 {
+    color: #0c0c0c;
+
+    font-size: 20px;
+
+    margin-bottom: 7px;
+}
+
+.username {
+    font-size: 17px;
+    color: #334158;
+
+    margin-bottom: 20px;
+}
+
+.bio {
+    font-size: 17px;
+
+    color: #222222;
+
+    margin-bottom: 35px;
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.profile-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.profile-stats strong {
+    font-size: 23px;
+    color: #111111;
+}
+
+.profile-stats span {
+    font-size: 16px;
+    color: #354258;
+}
+
+
+/* =========================
+   TRENDING
+========================= */
+
+.trending {
+    padding: 21px 23px 25px;
+}
+
+.trending h2 {
+    font-size: 20px;
+    color: #111111;
+
+    margin-bottom: 21px;
+}
+
+.trend {
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.trend:last-child {
+    margin-bottom: 0;
+}
+
+.trend strong {
+    color: #075bc5;
+
+    font-size: 17px;
+}
+
+.trend span {
+    color: #344156;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: calc(100% - 245px);
+    max-width: 1390px;
+
+    margin: 27px auto;
+
+    text-align: right;
+
+    color: #303b4d;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   NEW POST ANIMATION
+========================= */
+
+.new-post {
+    animation: postAppear 0.4s ease;
+}
+
+@keyframes postAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 25px;
+    }
+
+    .brand {
+        min-width: 220px;
+    }
+
+    .container,
+    footer {
+        width: calc(100% - 50px);
+    }
+
+    .post-actions {
+        gap: 60px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .navbar {
+        height: auto;
+        padding: 18px 22px;
+
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .brand {
+        min-width: auto;
+    }
+
+    .navigation {
+        height: 50px;
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 35px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container,
+    footer {
+        width: calc(100% - 24px);
+    }
+
+    .brand {
+        font-size: 23px;
+    }
+
+    .navigation {
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 15px;
+    }
+
+    .nav-link i {
+        font-size: 18px;
+    }
+
+    .create-post {
+        padding: 18px;
+    }
+
+    .post {
+        padding: 18px;
+    }
+
+    .post-actions {
+        gap: 30px;
+    }
+
+    .sidebar {
+        display: flex;
+    }
+
+    .profile-stats {
+        gap: 10px;
+    }
+
+    .post-content {
+        font-size: 16px;
+    }
+
+}

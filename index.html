@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MicroBlog</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="brand">
+            <i class="fa-solid fa-feather-pointed"></i>
+            <span>MicroBlog</span>
+        </div>
+
+        <nav class="navigation">
+
+            <a href="#" class="nav-link active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#" class="nav-link">
+                <i class="fa-solid fa-hashtag"></i>
+                <span>Explore</span>
+            </a>
+
+            <a href="#" class="nav-link">
+                <i class="fa-regular fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+        <button class="notification">
+            <i class="fa-regular fa-bell"></i>
+        </button>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- LEFT SECTION -->
+        <section class="feed">
+
+            <!-- CREATE POST -->
+            <div class="create-post card">
+
+                <h2>Create a post</h2>
+
+                <textarea
+                    id="postInput"
+                    placeholder="What's on your mind?"></textarea>
+
+                <div class="post-tools">
+
+                    <div class="tools">
+
+                        <button title="Add image">
+                            <i class="fa-regular fa-image"></i>
+                        </button>
+
+                        <button title="Add emoji">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </button>
+
+                        <button title="Add location">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>
+
+                    </div>
+
+                    <button id="postButton" class="post-button">
+                        Post
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- POST 1 -->
+            <article class="post card">
+
+                <div class="post-header">
+
+                    <div>
+                        <h3>Santhosh</h3>
+                        <span>@santhosh_07 · 2m</span>
+                    </div>
+
+                    <button class="more-button">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+
+                </div>
+
+                <div class="post-content">
+
+                    <p>
+                        Just finished building my first micro-blogging website! 🚀
+                    </p>
+
+                    <p>
+                        Feels amazing to see it live. 😊
+                    </p>
+
+                </div>
+
+                <div class="post-actions">
+
+                    <button class="action like-button">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="like-count">12</span>
+                    </button>
+
+                    <button class="action">
+                        <i class="fa-regular fa-comment"></i>
+                        <span>3</span>
+                    </button>
+
+                    <button class="action">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        <span>Share</span>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- POST 2 -->
+            <article class="post card">
+
+                <div class="post-header">
+
+                    <div>
+                        <h3>Sarah</h3>
+                        <span>@sarah_codes · 15m</span>
+                    </div>
+
+                    <button class="more-button">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+
+                </div>
+
+                <div class="post-content">
+
+                    <p>
+                        Learning JavaScript is fun! 💻
+                    </p>
+
+                    <p>
+                        One step at a time. Consistency is the key 🔑
+                    </p>
+
+                </div>
+
+                <div class="post-actions">
+
+                    <button class="action like-button">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="like-count">25</span>
+                    </button>
+
+                    <button class="action">
+                        <i class="fa-regular fa-comment"></i>
+                        <span>5</span>
+                    </button>
+
+                    <button class="action">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        <span>Share</span>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- POST 3 -->
+            <article class="post card">
+
+                <div class="post-header">
+
+                    <div>
+                        <h3>Karthik</h3>
+                        <span>@karthik_dev · 1h</span>
+                    </div>
+
+                    <button class="more-button">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+
+                </div>
+
+                <div class="post-content">
+
+                    <p>
+                        Coffee + Code = Best Combo ☕💻
+                    </p>
+
+                    <p>
+                        What's your productivity secret? 🤔
+                    </p>
+
+                </div>
+
+                <div class="post-actions">
+
+                    <button class="action like-button">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="like-count">18</span>
+                    </button>
+
+                    <button class="action">
+                        <i class="fa-regular fa-comment"></i>
+                        <span>4</span>
+                    </button>
+
+                    <button class="action">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        <span>Share</span>
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="sidebar">
+
+            <!-- PROFILE CARD -->
+            <div class="profile-card card">
+
+                <img
+                    class="cover-image"
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85"
+                    alt="Mountain landscape">
+
+                <div class="profile-content">
+
+                    <h2>Santhosh</h2>
+
+                    <p class="username">
+                        @santhosh_07
+                    </p>
+
+                    <p class="bio">
+                        Full Stack Developer | Tech Enthusiast
+                    </p>
+
+                    <div class="profile-stats">
+
+                        <div>
+                            <strong>25</strong>
+                            <span>Posts</span>
+                        </div>
+
+                        <div>
+                            <strong>120</strong>
+                            <span>Following</span>
+                        </div>
+
+                        <div>
+                            <strong>300</strong>
+                            <span>Followers</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRENDING -->
+            <div class="trending card">
+
+                <h2>Trending Topics</h2>
+
+                <div class="trend">
+                    <strong>#100DaysOfCode</strong>
+                    <span>12.5K posts</span>
+                </div>
+
+                <div class="trend">
+                    <strong>#JavaScript</strong>
+                    <span>8.7K posts</span>
+                </div>
+
+                <div class="trend">
+                    <strong>#WebDevelopment</strong>
+                    <span>6.2K posts</span>
+                </div>
+
+                <div class="trend">
+                    <strong>#CodingLife</strong>
+                    <span>4.1K posts</span>
+                </div>
+
+                <div class="trend">
+                    <strong>#MicroBlog</strong>
+                    <span>3.6K posts</span>
+                </div>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2024 MicroBlog. All rights reserved.
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
